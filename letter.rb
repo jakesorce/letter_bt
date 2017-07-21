@@ -8,11 +8,8 @@ class RepeatLetters
 
 		input = gets.strip.to_s
 		CheckInput.new(input)
-		if !input.empty?
-			find_repeated input
-		else
-			RepeatLetters.new
-		end
+
+		find_repeated input
 	end
 
 	def find_repeated(input)
