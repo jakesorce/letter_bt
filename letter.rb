@@ -16,16 +16,16 @@ class RepeatLetters
 		most_repeated = ['', 0]
 
 		input.split(' ').each do |word|
-			@repeated = 1
+			@repeated_count = 1
 
 			word.each_char do |c|
-				@repeated = word.count(c) > @repeated ? word.count(c) : @repeated
+				@repeated_count = word.count(c) > @repeated_count ? word.count(c) : @repeated_count
 			end
 
-			if @repeated === most_repeated[1]
-				most_repeated.push(word, @repeated)
-			elsif @repeated > most_repeated[1]
-				most_repeated = [word, @repeated]
+			if @repeated_count === most_repeated[1]
+				most_repeated.push(word, @repeated_count)
+			elsif @repeated_count > most_repeated[1]
+				most_repeated = [word, @repeated_count]
 			end
 
 		end
